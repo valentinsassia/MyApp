@@ -1,0 +1,23 @@
+.menu-Contenedor-Oculto_search {
+    position: absolute;
+    width: 70%;
+    height: 8%;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    z-index: 1;
+    transition: all .05s linear;
+    font-size: 1.2rem ;
+}
+    .menu-Contenedor-Oculto_search.open {
+        height: 24%;
+        background-color: white;
+    }
+
+    .menu-Contenedor-Oculto.close {
+        height: 8%;
+        background-color: white;
+    }
+
+

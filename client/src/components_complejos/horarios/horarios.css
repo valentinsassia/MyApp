@@ -1,0 +1,36 @@
+/* Materialize */
+
+.contenedorcarousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+.col.s12 {
+    padding: 0 0;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.timecontenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 135px;
+    /* //para que no se vea mal, este height y el del contenedorcarousel tiene que estar en pixeles */
+    height: 49px;
+    border-radius: 5px;
+    background-color: grey;
+    font-size: 1.7em;
+} 
+
+.horaseleccionada {
+    border: 3px solid black;
+}
+
