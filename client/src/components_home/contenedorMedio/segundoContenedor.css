@@ -1,0 +1,65 @@
+.deslizar-Contenedor {
+    display: flex;
+    width: 40%;
+    height: 23%;
+    align-self: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Contenedor con la animacion de deslizar */
+
+.deslizarDedo-Contenedor {
+    width: 40px;
+    height: 75px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border-radius: 30px;
+    margin-top: 15%;
+    opacity: .5;
+}
+
+.deslizarDedo-Pelota {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    border-radius: 100px;
+    background-color: white;
+    animation-name: deslizar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+    @keyframes deslizar {
+        0% {
+            background-color: white;
+            transform: translateY(48px);
+        }
+        100% {
+            background-color: black;
+            transform: translateY(2px);
+        }
+    }
+
+
+/* Contenedor inferior con la flecha hacia abajo */
+
+.deslizarAbajo-Contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 18%;
+    background-color: black;
+    align-self: flex-end;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+}
+    .deslizarAbajo-Contenedor > ion-icon {
+        font-size: 25px;
+        color: white
+    }
+

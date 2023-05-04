@@ -1,0 +1,23 @@
+.buscar-contenedor_search {
+    display: flex;
+    width: 40%;
+    height: 4.2%;
+    align-self: flex-end;
+    justify-content: center;
+}
+
+.buscar_search {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    background-color: black;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+}
+    .buscar_search > ion-icon {
+        font-size: 25px;
+        color: white
+    }
