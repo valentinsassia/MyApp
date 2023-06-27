@@ -1,0 +1,113 @@
+.contenedor-principal_search {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.Container {
+    width: 100%;
+    /* // modificar este height */
+    height: 75% !important;
+}
+
+.Row {
+    height: 100% !important;
+}
+
+.col.s12 {
+    height: 100% !important;
+    padding: 0 0;
+}
+
+.Carousel {
+    height: 100% !important;
+    display: flex;
+    align-items: center ;
+    justify-content: center ;
+}
+
+.Carousel-item {
+    /* modificar este "width" */
+     width: 65% !important;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     height: 75% !important;
+     border-radius: 50px;
+}
+
+.indicator-item {
+    background-color: #737373 !important;
+}
+
+.indicator-item.active {
+    background-color: white !important;
+}
+
+
+/* Items del caroulse  */
+
+.boton-vermas_search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #00b400c9;
+    color: black;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 1.1em;
+}
+
+.Carousel-item > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.Carousel-item > p {
+    z-index: 2;
+    margin-left: 13px;
+}
+
+.PrecioComplejo {
+    color: #e4e4e4b0;
+    font-size: .9em;
+}
+
+.NombreComplejo {
+    font-size: 1.1em;
+    color: white !important;
+    margin-top: 20px;
+}
+
+.UbicacionComplejo {
+    color:#e4e4e459;
+    font-size: .7em;
+}
+
+    /* Contenedor Transparente Negro */
+
+.oscuroTransparente_search {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: .4;
+    border-radius: 25px;
+}

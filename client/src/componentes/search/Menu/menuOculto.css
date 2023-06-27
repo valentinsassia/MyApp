@@ -1,0 +1,18 @@
+.menu-Contenedor-Oculto_search {
+    position: absolute;
+    width: 100%;
+    top: 65px;
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    z-index: 10;
+    transition: all .05s linear;
+    font-size: 1rem ;
+}
+    .menu-Contenedor-Oculto_search.open {
+        display: flex;
+        height: 210px;
+        background-color: #0f0f0f;
+    }
+
+

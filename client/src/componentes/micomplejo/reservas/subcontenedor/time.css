@@ -1,0 +1,53 @@
+.contenedorCarousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+}
+
+.contenedorCarousel > .container {
+    width: 100% !important;
+    height: 75% !important;
+    margin: 0 0 !important;
+}
+
+.contenedorCarousel > .row {
+    height: 100% !important;
+}
+
+.contenedorCarousel > .col.s12 {
+    height: 100% !important;
+    padding: 0 0;
+}
+
+.contenedorCarousel > .carousel {
+    height: 100% !important;
+    display: flex;
+    align-items: center ;
+    justify-content: center ;
+}
+
+.contenedorCarousel > .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100% !important;
+    user-select: none;
+}
+
+.Width {
+    width: 100px !important;
+}
+
+.contenedorHora {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 43px;
+    border-radius: 5px;
+    font-size: 1.7em;
+    border-radius: 8px;
+}

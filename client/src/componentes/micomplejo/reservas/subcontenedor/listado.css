@@ -1,0 +1,47 @@
+.listadocontenedor {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 284px;
+    align-items: center;
+    font-size: 1.4em;
+    overflow-y: scroll;
+}
+
+.listadocontenedor::-webkit-scrollbar-thumb {
+    background-color: #ACACAC;
+    margin-left: 1px;
+}
+
+.usuario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    background-color: #080808;
+    border-radius: 10px;
+    margin-top: 7px;
+    color: #ACACAC;
+    font-size: 1em;
+    padding: 0 7px;
+}
+
+.listadocontenedor > div > ion-icon:first-child {
+    font-size: 1.5em;
+}
+
+.abrir {
+    width: 100%;
+    min-height: 50px;
+    background-color: #101010;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.editar {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+

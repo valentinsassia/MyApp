@@ -1,0 +1,71 @@
+.timecontenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 107px;
+    /* //para que no se vea mal, este height y el del contenedorcarousel tiene que estar en pixeles */
+    height: 42px;
+    border-radius: 5px;
+    background-color: grey;
+    font-size: 1.3em;
+    z-index: 1;
+} 
+
+.horaseleccionada {
+    border: 1px solid white;
+}
+
+.false {
+    background-color: #990000e0;
+    opacity: .8;
+}
+
+.true {
+    background-color: #00ad00;
+}
+
+
+/* Materialize */
+
+.contenedorcarousel {
+    display: flex;
+    margin: 4% 0;
+    align-items: center;
+    justify-content: center;
+    height: 51px;
+}
+
+.container {
+    width: 100% !important;
+    height: 42.5px !important;
+}
+
+.row {
+    height: 100% !important;
+}
+
+.col.s12 {
+    height: 100% !important;
+    padding: 0 0;
+}
+
+.carousel {
+    height: 100% !important;
+    display: flex;
+    align-items: center ;
+    justify-content: center ;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100% !important;
+    user-select: none;
+}
+
+.width {
+    width: 115px !important;
+}
+
+

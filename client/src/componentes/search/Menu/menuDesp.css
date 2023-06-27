@@ -1,0 +1,140 @@
+.menu-Contenedor_search {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 65px;
+    background-color: #1a1a1a;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 11;
+    color: white;
+    font-size: 2em;
+}
+.menu-Contenedor_search > ion-icon {
+    margin-left: 1.5%;
+}
+
+.rebuscar {
+    height: 45px;
+    width: 70%;
+    margin-left: 3%;
+    background-color: #0f0f0f;
+    border: 1px solid black;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 3%;
+}
+
+.rebuscar > ion-icon {
+    font-size: .8em;
+    color: #D3D3D3;
+    margin-right: 30px;
+}
+
+.rebuscar > p {
+    color: #878787;
+    font-size: .5em;
+}
+
+.icono-Contenedor_search {
+    border: 0;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    margin-right: 1%;
+}
+
+.icono-Contenedor_search > span {
+    border-radius: 5px;
+    background-color: white;
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
+button:focus {
+    background-color: transparent;
+}
+
+button.open_search span.arriba-line {
+    animation-name: arriba-animation;
+}
+button.open_search span.medio-line {
+    animation-name: medio-animation;
+}
+button.open_search span.abajo-line {
+    animation-name: abajo-animation;
+}
+
+button span.arriba-line {
+    animation-name: arriba-animation-close;
+}
+button span.medio-line {
+    animation-name: medio-animation-close;
+}
+button span.abajo-line {
+    animation-name: abajo-animation-close;
+}
+
+@keyframes arriba-animation {
+    100% {
+        margin: 0 auto;
+        transform: translateY(3px) rotate(-45deg);
+    }
+}
+@keyframes abajo-animation {
+    50%, 100% {
+        margin: 0 auto;
+        transform: translateY(-3px) rotate(45deg);
+    }
+}
+@keyframes medio-animation {
+    20%, 100% {
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes arriba-animation-close {
+    0% {
+        margin: 0 auto;
+        transform: translateY(3px) rotate(-45deg);
+    }
+    50%, 100% {
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg); 
+    }
+}
+@keyframes abajo-animation-close {
+    0% {
+        margin: 0 auto;
+        transform: translateY(-3px) rotate(45deg);
+    }
+    50%, 100% {
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg); 
+    }
+}
+@keyframes medio-animation-close {
+    0% {
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    20%, 100% {
+        margin: 0 auto;
+        width: 60%;
+        opacity: 1; 
+    }
+}
+
+
+

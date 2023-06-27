@@ -8,6 +8,12 @@ const complejos = new mongoose.Schema({
     },
     id_location: {
         type: String
+    },
+    horarios: {
+        type: Object
+    },
+    historial: {
+        type: Array
     }
 })
 
