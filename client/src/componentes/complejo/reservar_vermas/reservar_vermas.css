@@ -1,0 +1,22 @@
+.reservar, .masInformacion {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #cccccc;
+    width: 30%;
+    height: 100%;
+    opacity: .5;
+}
+
+.span {
+    width: 30px !important;
+    height: 2px !important;
+    margin: 1px 0 ;
+    background-color: #cccccc !important;
+}
+
+.seleccionado {
+    opacity: 1;
+}

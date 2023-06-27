@@ -1,0 +1,111 @@
+.menu-Contenedor {
+    position: absolute;
+    display: flex;
+    width: 225px;
+    height: 55px;
+    background-color: white;
+    align-self: flex-start;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.icono-Contenedor {
+    border: 0;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    margin-right: 5px;
+}
+
+span {
+    border-radius: 5px;
+    background-color: black;
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 5px auto;
+
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
+button:focus {
+    background-color: transparent;
+}
+
+button.open span.arriba-line {
+    animation-name: arriba-animation;
+}
+button.open span.medio-line {
+    animation-name: medio-animation;
+}
+button.open span.abajo-line {
+    animation-name: abajo-animation;
+}
+
+button span.arriba-line {
+    animation-name: arriba-animation-close;
+}
+button span.medio-line {
+    animation-name: medio-animation-close;
+}
+button span.abajo-line {
+    animation-name: abajo-animation-close;
+}
+
+@keyframes arriba-animation {
+    100% {
+        margin: 0 auto;
+        transform: translateY(3px) rotate(-45deg);
+    }
+}
+@keyframes abajo-animation {
+    50%, 100% {
+        margin: 0 auto;
+        transform: translateY(-3px) rotate(45deg);
+    }
+}
+@keyframes medio-animation {
+    20%, 100% {
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes arriba-animation-close {
+    0% {
+        margin: 0 auto;
+        transform: translateY(3px) rotate(-45deg);
+    }
+    50%, 100% {
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg); 
+    }
+}
+@keyframes abajo-animation-close {
+    0% {
+        margin: 0 auto;
+        transform: translateY(-3px) rotate(45deg);
+    }
+    50%, 100% {
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg); 
+    }
+}
+@keyframes medio-animation-close {
+    0% {
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    20%, 100% {
+        margin: 0 auto;
+        width: 60%;
+        opacity: 1; 
+    }
+}
+

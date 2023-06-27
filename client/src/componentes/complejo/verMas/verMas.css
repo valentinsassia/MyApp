@@ -1,0 +1,27 @@
+.subContenedorVerMas {
+    width: 100%;
+    height: 85%;
+    padding: 0 20px;
+    color: #CCCCCC;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+.nombre {
+    font-size: 1.2em;
+    margin-top: 7px;
+    margin-bottom: 3px;
+}
+
+.secundarios {
+    font-size: 1em;
+}
+
+.terciarios {
+    color: #999999;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+
+

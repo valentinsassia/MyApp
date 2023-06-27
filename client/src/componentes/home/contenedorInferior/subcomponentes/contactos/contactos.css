@@ -1,0 +1,11 @@
+.contenedorcontactos {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contenedorcontactos > ion-icon {
+    color: white;  
+    font-size: 2.8em;
+}

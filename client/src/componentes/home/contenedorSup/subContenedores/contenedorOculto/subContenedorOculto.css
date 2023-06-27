@@ -1,0 +1,28 @@
+.buscar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 85%;
+    font-size: 1em;
+}
+
+.buscar > div {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    width: 20%;
+}
+
+.buscar > div > ion-icon {
+    font-size: 1.8em;
+}
+
+.Span {
+    background-color: #6969696e;
+    width: 90% !important;
+    height: .5px !important;
+    margin: 13px 0;
+}

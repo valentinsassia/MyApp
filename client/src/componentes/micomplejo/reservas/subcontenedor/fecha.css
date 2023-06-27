@@ -1,0 +1,13 @@
+.subcontenedorFecha {
+    display: flex;
+    align-items: center;
+}
+
+.subcontenedorFecha > ion-icon {
+    font-size: 1.1em;
+}
+
+.subcontenedorFecha > p {
+    margin: 15px;
+    font-size: 1.4em;
+}

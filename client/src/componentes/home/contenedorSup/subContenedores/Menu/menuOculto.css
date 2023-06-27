@@ -1,0 +1,21 @@
+.menu-Contenedor-Oculto {   
+    position: absolute;
+    width: 225px;
+    height: 201px;
+    margin-top: 5%;
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    z-index: 1;
+    transition: all .2s linear;
+    font-size: 1rem ;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+}
+    .menu-Contenedor-Oculto.open {
+        display: flex;
+    }
+
+
+
