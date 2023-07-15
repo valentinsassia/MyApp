@@ -75,6 +75,9 @@ export const Contexto = ({children}) => {
     // Use para "reservar y ver mas", en "complejo.js"
     const [seleccionado, setSeleccionado] = useState(true)
 
+    // condicion para abir las pestañas en "/miComplejo/Configuracion"
+    const [condicion, setCondicion] = useState()
+
     return <Contextos.Provider value={{
         fecha, setFecha,
         hora, setHora,
@@ -88,7 +91,8 @@ export const Contexto = ({children}) => {
         acceso, setAcceso,
         deslizar, setDeslizar,
         seleccionado, setSeleccionado,
-        rebuscar, setRebuscar
+        rebuscar, setRebuscar,
+        condicion, setCondicion
     }}>
         {children}
     </Contextos.Provider>

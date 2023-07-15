@@ -1,24 +1,7 @@
 // importamos el modelo llamado "Complejos" de Mongo
 import complejos from "../models/Complejos.js"
 
-export const estadisticas = async (req,res) => {
-    try {
-        const reservas = await complejos.find({
-            nombre: {
-                $eq: "Barrilete Cosmico"
-            }
-        })
-        const Historial = await reservas[0].historial.filter(elemento => {
-            return elemento.semana == "26"
-        })
-        const dias = Historial.map(elemento => {
-            return elemento.dia
-        })
-        console.log(Historial)
-    } catch (error) {
-        console.log(error)
-    }
-}
+
 
 export const loginUser = async (req,res) => {
     try {
@@ -52,6 +35,7 @@ export const getLocation = async (req, res) => {
     } catch (error) {console.log(error)}
 }
 
+
 export const getInformacion = async (req, res) => {
     try {
     const paramsNombre = req.params.nombre
@@ -63,6 +47,7 @@ export const getInformacion = async (req, res) => {
     res.json(peticion)
     } catch (error) {console.log(error)}
 }
+
 
 export const upDate = async (nombre, dia, hora) => {
    try { 

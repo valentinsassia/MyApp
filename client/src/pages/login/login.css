@@ -23,7 +23,7 @@
     padding: 30px;
 }
 
-form {
+.Form {
     position: relative;
     display: flex;
     align-items: center;

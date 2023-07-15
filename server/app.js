@@ -22,6 +22,174 @@ app.use(cors())
 
 io.on("connection", (socket) => {
     try {
+        socket.on("dias", async () => {
+            const dias = await complejos.find({
+                nombre: {
+                    $eq: "Barrilete Cosmico"
+                }
+            })
+
+            const elementos = dias[0].historial.filter(elemento => {
+                return elemento
+            })
+
+            const Dias = elementos.map(e => {
+                return e.dia
+            })
+
+            let dia = ["domingo","lunes","martes","miercoles", "jueves", "viernes","sabado"]
+
+            let Total = []
+            
+            for (let i = 0; i < 7; i++) {
+                let cantidad = Dias.filter(e => {
+                    return e == dia[i]
+                })
+                Total.push(cantidad.length)
+            }
+
+            socket.emit("diasRes", Total)
+
+        })
+
+        socket.on("horarios", async () => {
+            const horarios = await complejos.find({
+                nombre: {
+                    $eq: "Barrilete Cosmico"
+                }
+            })
+
+            const elementos = horarios[0].historial.filter(elemento => {
+                return elemento
+            })
+
+            const Hora = elementos.map(e => {
+                return e.hora
+            })
+
+            let horariosReducidos = [ ... new Set(Hora) ] 
+
+            let Total = []
+            
+            for (let i = 0; i < horariosReducidos.length; i++) {
+                let cantidad = Hora.filter(e => {
+                    return e == horariosReducidos[i]
+                })
+                Total.push(cantidad.length)
+            }
+
+            socket.emit("horariosRes", {Total, horariosReducidos})
+        })
+
+        socket.on("anual", async (año) => {
+            const reservas = await complejos.find({
+                nombre: {
+                    $eq: "Barrilete Cosmico"
+                }
+            })
+
+            const elementos = reservas[0].historial.filter(elemento => {
+                return elemento.año == año
+            })
+
+            const meses = elementos.map(elemento => {
+                return elemento.mes
+            })
+
+            let mes = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"]
+
+            let Total = []
+
+            for (let i = 0; i < 12; i++) {
+                let cantidad = elementos.filter(e => {
+                    return e.mes == mes[i]
+                })
+                
+                Total.push(cantidad.length)
+            }
+
+            socket.emit("anualRes", Total)
+        })
+
+        socket.on("mensual", async (datos) => {
+            const reservas = await complejos.find({
+                nombre: {
+                    $eq: "Barrilete Cosmico"
+                }
+            })
+
+            const elementos = reservas[0].historial.filter(elemento => {
+                return elemento.mes == "diciembre"
+            })
+
+            const semanas = elementos.map(elemento => {
+                return elemento.semana
+            })
+
+            let semanasReducidas = [ ... new Set(semanas) ]
+
+            let semanasReducidas_2 = semanasReducidas.sort()
+        
+            let Total = []
+
+            for (let i = 0; i < 4; i++) {
+                let cantidad = elementos.filter(e => {
+                    return e.semana == semanasReducidas_2[i]
+                })
+                
+                Total.push(cantidad.length)
+            }
+
+            if (datos[1] == true) {
+                socket.emit("mensualRes", Total)
+            }
+            if (datos[1] == false) {
+                socket.emit("mensualAnteriorRes", Total)
+            }
+            if (datos[1] == null) {
+                socket.emit("mensualElegidoRes", Total)
+            }
+            
+        })
+
+        socket.on("semana", async (datos) => {
+            const reservas = await complejos.find({
+                nombre: {
+                    $eq: "Barrilete Cosmico"
+                }
+            })
+    
+            const Historial = reservas[0].historial.filter(elemento => {
+                return elemento.semana == "26"
+            })
+    
+            let dias = ["domingo","lunes","martes","miercoles", "jueves", "viernes","sabado"]
+    
+            let Total = []
+    
+            for(let i = 0; i < 7; i++) {
+                let cantidad = Historial.filter(e => {
+                    return e.dia == dias[i]
+                })
+                Total.push(cantidad.length)
+            }
+
+            if (datos[1] == true) {
+                socket.emit("semanaRes", Total)
+            }
+            if (datos[1] == false) {
+                socket.emit("semanaAnteriorRes", Total)
+            }
+
+            if (datos[1] == null) {
+                socket.emit("semanaElegidaRes", Total)
+            }
+        })
+
+        
+
+
+
         socket.on("complejo", async (complejo) => {
             const informacion = await complejos.find({nombre: {$eq: complejo}})
             if (informacion.length) {
@@ -53,14 +221,15 @@ io.on("connection", (socket) => {
             };
 
             let dias = ["domingo","lunes","martes","miercoles", "jueves", "viernes","sabado"]
+            let meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"]
 
             let hoy = new Date()
             let numDia = dias[hoy.getDay()]
-            let mes = hoy.getMonth() + 1
+            let mes = meses[hoy.getMonth()]
             let año = hoy.getFullYear()
             let semana = numeroDeSemana(hoy)
 
-            let Fecha = {"dia" : `${numDia}`, "semana" : `${semana}`, "mes" : `${mes}`, "año" : `${año}`, "usuario" : "Valentiin"}
+            let Fecha = {"dia" : `${numDia}`, "semana" : `${semana}`, "mes" : `${mes}`, "año" : `${año}`, "hora" : `${hora}`, "usuario" : "Juani Sassia"}
 
             await complejos.updateOne({nombre: {$eq: nombre}}, { $addToSet: { "historial": Fecha}})
         })

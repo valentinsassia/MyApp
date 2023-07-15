@@ -1,0 +1,46 @@
+.contenedorGraficos > .swiper > .swiper-wrapper > .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    margin-bottom: 20px;
+    margin-top: 7px;
+}
+
+.subcontenedorFecha {
+    color: #CCCCCC;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.siguiente::after, .atras::after, .next::after, .back::after {
+    font-size: 1em !important;
+    color: white;
+}
+
+.MuiFormControl-root {
+    margin-top: 20px !important;
+    width: 70% !important;
+    border: 2px solid #ffffff78 !important;
+}
+
+.MuiFormControl-root:hover {
+    border: 2px solid white !important;
+}
+
+.MuiInputBase-input {
+    border-bottom: 0px !important;
+    margin: 0 !important;
+    padding: 16.5px 14px !important;
+    color: #CCCCCC !important;
+    height: 30px !important;
+}
+
+
+
+
