@@ -3,6 +3,7 @@ import "./micomplejo.css"
 import Reservas from "../../componentes/micomplejo/reservas/reservas"
 import Estadisticas from "../../componentes/micomplejo/estadisticas/estadisticas"
 import Barrainferior from "../../componentes/micomplejo/barrainferior/barrainferior.js"
+import Configuraciones from "../../componentes/micomplejo/configuracion/configuracion"
 
 import { Link, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
@@ -68,12 +69,18 @@ function MiComplejo ({condicion}) {
         } 
     }
 
+    const configuracion = () => {
+        if (condicion == "configuracion") {
+            return (
+                <Configuraciones />
+            )
+        } 
+    }
+
         return (
             <div className="contenedorMiComplejo">
                 <button className={`icono-Contenedor ${Open ? `open` : ``}`} onClick={() => setOpen(!Open)}>
-                    <span className="arriba-line"></span>
-                    <span className="medio-line"></span>
-                    <span className="abajo-line"></span>
+                        {/* falta menu hamburguesa */}
                 </button>
                 <div className={`${Open ? `deslizarContenedor` : `none`}`}>
                     <Link to={"/"}><p>Inicio</p></Link>
@@ -81,6 +88,7 @@ function MiComplejo ({condicion}) {
                 </div>
                 {reservas()}
                 {estadisticas()}
+                {configuracion()}
                <Barrainferior 
                     nombre = {nombre}
                     condicion = {condicion}

@@ -34,7 +34,7 @@ function Login () {
 
             <div onClick={() => navigate(-1)}><ion-icon name="arrow-back-outline"></ion-icon></div>
             <div className="contenedorForm">
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)} className="Form">
                     <div className="first">
                         <input type="text" name="email" autoComplete="off" {...register("email", {
                             required: true

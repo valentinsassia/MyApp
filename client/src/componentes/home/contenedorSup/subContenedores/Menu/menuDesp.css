@@ -20,7 +20,7 @@
     margin-right: 5px;
 }
 
-span {
+.menu-Contenedor > .icono-Contenedor > span {
     border-radius: 5px;
     background-color: black;
     display: block;

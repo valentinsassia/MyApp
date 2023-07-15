@@ -1,0 +1,64 @@
+.graficos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    z-index: 0;
+}
+
+.graficos > .swiper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60% !important;
+    background-color:#08080887;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.swiper-slide {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.Button {
+    position: absolute !important;
+    transform: rotate(90deg) !important;
+    color: white !important;
+    outline-color: transparent !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.Button::after {
+    font-size: 1em !important;
+}
+
+.Prev, .Next {
+    position: absolute;
+    background-color: #08080887;
+    height: 5%;
+    width: 70px;
+}
+
+.Prev {
+    top: 14%;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+}
+
+.Next {
+    bottom: 14%;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.swiper-slide > div {
+    width: 95%;
+}

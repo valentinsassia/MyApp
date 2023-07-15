@@ -1,0 +1,7 @@
+.estadisticas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 92%;
+    overflow-y: scroll;
+}

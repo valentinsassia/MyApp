@@ -1,6 +1,5 @@
 import "./time.css"
 
-import "materialize-css/dist/css/materialize.min.css"
 import M from "materialize-css";
 
 import { useEffect, useContext } from "react";
